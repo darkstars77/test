@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:delay="40%"
+	android:animationOrder="normal"
+	android:animation="@anim/anim_alpha_translate_listview">
+</layoutAnimation>
+
+<!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/anim_layout_controller.xml -->

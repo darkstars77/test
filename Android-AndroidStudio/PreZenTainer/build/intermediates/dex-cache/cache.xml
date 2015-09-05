@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-16cae8eb86882265b786051016e125974ded9e1b.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="40e7757d9b06db670062ddb3cf5b30c129b2fd8c">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-cc5ebc084d8e3c6f6db0aff88f9da2c1c724deef.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.github.lecho\hellocharts-library\1.5.5\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="65ed384e3fa43f415bac7f9d0f2e94da39273456">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-63aa4b686bc9c3bd79a32c3b013b9414fb1d9865.jar" />
+    </item>
+    <item
+        jar="C:\Users\SAMSUNG\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\gson-2.2.4-f37662550b80f462a705e58491660b85516c9728.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5d4bccb885c8a89d066ecb6c4addb553a99a79a2">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-9a536612072d4e68505a73ac5010b053717a3636.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.circular-progress-button\library\1.1.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8a6ed980c74ad35b2dfc4e1daf97bfc0eea5d7c9">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-312839b68807c4156e2dabc36694a4d6c3bcc349.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-c3bc025ba5ad70fb6453746e47b5561bd04af7d8.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-2c3b503e2e835bf4ef8a5d8f3f0c645f3a062b54.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-cd98c525ac28b6f8e37bce320850250ea69fa32d.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-a73588e3ceb8b4f0b829288268dc9d3421195c82.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-4f96ef90011929be76c39fa47d099eb19fac0903.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-d0945cc39acf67adb90864f5909be8e1bb85b1e5.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-54f39ef23829de7e56b5004fb201ed749c328c18.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\libs\sdk-v1.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e2ce3786b6e9519934c4a54aaaaf39525bf4486c">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\sdk-v1.0.0-213d5a8fc5b5ed2019aeef4f378831bf83af39e6.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\palette-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="15b669fd484d82539a354ccd1f2a08737474e95e">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-b2f6720796c1a256c9ff85cba59b3ea24d1cb070.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-8966e51317a8d77d5ed7e0e70440e47bb7e056ac.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-d4c7d0ea51f5f684d8e5cb3f8125e3d5b1591317.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\libs\volley.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\volley-48689bb3e6615826465b24210bd5295b54f2c8df.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\libs\accessory-v2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="06839af7be84d673ecd37f10e581350b76dc93fc">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\accessory-v2.2.2-7944a4079d18fab43d32c31eb8022dcdf97d8a67.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-33b9cb738b775fb0eb987e98b225c84eaa8fa363.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-0a4052e975c4c6e7caaac14982cddd45fa2d205e.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-6235b04764a4b17fd8b3829ddc92b31e537d1f3b.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-8bee40f30a43889f81e8f3d0ecbd82260fa232b7.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-9f86bb38746a43e56873a2d4217ea76b6c8474ab.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-90ee247fa9fbce09525f13345e707adeb36a5c4e.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-e2cd7bb36f9b5f86e6abf0b0297a75d5dfc31eb1.jar" />
+    </item>
+    <item
+        jar="C:\Users\SAMSUNG\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-9625ff63bd845aeadb6c491a1fc07846f44891bd.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-06b00b958f8008840b2b5028c1e851fee961a900.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1618fd467fb5971c394741e8976ededb97aaee0a">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-f840b1dad0b3a5b4af089c79e6f9310d4123ba07.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-b48a5c212d8af3b3ceefe8ab47f4d00c7381e173.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-bbe10e45be679d4044499834ed75939766a255d2.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-a0f64a1a18c138fb04a1248d8e3c30c396f314ad.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-874e9f8bb967e43d9a28ff80d87a5cf0419140d5.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-359631fed2d99c429c984dede354c0c70c77ec4e.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-6bf56e3dc29c15d013136afbb232ae90590785aa.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="bb0ac3f3ee2d71854501cc28e52cc84a20209b41">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-37a25edd5137a08c44a0a76c763459f0201db3d3.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-ced8d2687a4bcd35c6b0cfb4cd80835ae8142a14.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\leanback-v17\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="73f1099dae738216ba2af0f9efd92fec040d890f">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-054d6596e5aa8be1e57b1ab84826ea844a8c561c.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-1435683a7f1a08f76b8321b02d8f87b4441c16ae.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-b999490673f8f7d63d392c0eb162c3a8ca605bae.jar" />
+    </item>
+    <item
+        jar="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="C:\dev\prezentainer\Android-AndroidStudio\PreZenTainer\app\build\intermediates\pre-dexed\debug\classes-c06c0b0fe007f307fd0797db85df0c2f65f57205.jar" />
+    </item>
+
+</items>
