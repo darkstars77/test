@@ -99,14 +99,14 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         // Bind Service
         doBindService();
 
-        startBtn = (Button)getActivity().findViewById(R.id.startBtn);
-        timerCheckBox = (CheckBox)getActivity().findViewById(R.id.timerCheckBox);
-        timerRadioGroup = (RadioGroup)getActivity().findViewById(R.id.timerRadioGroup);
-        txtsendJson = (TextView)getActivity().findViewById(R.id.txtsendJson);
-        ptTitleEditText = (EditText)getActivity().findViewById(R.id.ptTitleEditText);
-        rootView = (LinearLayout)getActivity().findViewById(R.id.settingActivityView);
-        connectToGearBtn = (CircularProgressButton)getActivity().findViewById(R.id.connectToGearBtn);
-        connectToPcBtn = (CircularProgressButton)getActivity().findViewById(R.id.connectToPcBtn);
+        startBtn = (Button)rootView.findViewById(R.id.startBtn);
+        timerCheckBox = (CheckBox)rootView.findViewById(R.id.timerCheckBox);
+        timerRadioGroup = (RadioGroup)rootView.findViewById(R.id.timerRadioGroup);
+        txtsendJson = (TextView)rootView.findViewById(R.id.txtsendJson);
+        ptTitleEditText = (EditText)rootView.findViewById(R.id.ptTitleEditText);
+        rootView = (LinearLayout)rootView.findViewById(R.id.settingActivityView);
+        connectToGearBtn = (CircularProgressButton)rootView.findViewById(R.id.connectToGearBtn);
+        connectToPcBtn = (CircularProgressButton)rootView.findViewById(R.id.connectToPcBtn);
         connectToGearBtn.setIndeterminateProgressMode(true); // progress mode On !
         connectToPcBtn.setIndeterminateProgressMode(true); // progress mode On !
 
@@ -123,6 +123,120 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         });
 
         startBtn.setEnabled(false);
+
+
+        startBtn.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                final String mPtTitle =   ptTitleEditText.getText().toString().trim();
+
+                // 프레젠테이션 제목을 기입한 경우
+                if(!TextUtils.isEmpty(mPtTitle)){
+
+                    // AlertDialog
+                    AlertDialog.Builder mAlertBuilder = new AlertDialog.Builder(
+                            getActivity());
+                    mAlertBuilder.setTitle(mPtTitle)
+                            .setMessage( "발표를 시작하시겠습니까?")
+                            .setCancelable(false)
+                            .setPositiveButton("시작하기", new DialogInterface.OnClickListener() {
+                                // 시작하기 버튼 클릭시 설정
+                                public void onClick(DialogInterface dialog, int whichButton) {
+
+                                    if(mDeviceName != null && mAccessoryService != null){
+
+
+                                        // Service에 device name, ppt tittle, 계정정보 넘기기
+                                        mAccessoryService.mDeviceName = mDeviceName;
+                                        mAccessoryService.mPtTitle = mPtTitle;
+                                        mAccessoryService.yourId = yourId;
+
+                                        if (timeInterval != null) {
+                                            // timeInterval(ArrayList) -> JSONArray -> String ex) "["2","3","5"]"
+                                            String timeJson = gson.toJson(timeInterval);
+                                            sendDataToService(timeJson);
+                                        }else{
+                                            // 체크박스를 단 한번도 누르지 않은 경우, 눌렀다가 해제한 경우 "[]"을 전달
+                                            sendDataToService("[]");
+                                        }
+
+                                        // Start Activity로 나의 id와 PT 제목을 넘겨준다.
+                                        startActivity(new Intent(getActivity(), FileTransferRequestedActivity.class)
+                                                .putExtra("yourId", yourId)
+                                                .putExtra("title", mPtTitle));
+
+                                        mDeviceName = null;
+
+                                    }else{
+
+                                        getActivity().finish();
+                                        Toast.makeText(getActivity(), "설정을 다시 진행해주세요",Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                        // 취소 버튼 클릭시 설정
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    AlertDialog dialog = mAlertBuilder.create();
+
+                    dialog.show();
+
+                    // 프레젠테이션 제목을 기입하지 않은 경우
+                }else{
+                    Toast.makeText(getActivity(), "프레젠테이션 제목을 반드시 기입하세요", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+
+        connectToGearBtn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                /*
+                *  progress = 0 : Default상태
+                *  progress = -1 : Error상태
+                *  progress = 50 : 진행 중인 상태
+                *  progress = 100 : 완료
+                *
+                * */
+
+                if (connectToGearBtn.getProgress() == 0) {
+                    connectToGearBtn.setProgress(50);
+                    startConnection();
+                } else if (connectToGearBtn.getProgress() == 100) {
+                    connectToGearBtn.setProgress(0);
+                }else if(connectToGearBtn.getProgress() == -1){
+                    connectToGearBtn.setProgress(0);
+                } else {
+                    connectToGearBtn.setProgress(0);
+                }
+            }
+
+        });
+
+        connectToPcBtn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                if (connectToPcBtn.getProgress() == 0) {
+
+                    // device name 요청
+                    Intent requestDeviceNameIntent = new Intent(getActivity(), SettingBluetoothActivity.class);
+                    startActivityForResult(requestDeviceNameIntent, REQUEST_DEVICENAME);
+
+                } else if (connectToPcBtn.getProgress() == 100) {
+                    connectToPcBtn.setProgress(0);
+                }else if(connectToPcBtn.getProgress() == -1){
+                    connectToPcBtn.setProgress(0);
+                } else {
+                    connectToPcBtn.setProgress(0);
+                }
+            }
+
+        });
+
 
         // 수정 - 타이머설정 라디오박스 보이게 하기
         timerCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -244,127 +358,6 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         super.onActivityResult(requestCode, resultCode, intent);
     }
 
-
-
-    // Click Event Handler Call Back
-    public void myOnClick(View v) {
-
-        switch (v.getId()) {
-
-            // 기어와 연결
-            case R.id.connectToGearBtn: {
-
-                /*
-                *  progress = 0 : Default상태
-                *  progress = -1 : Error상태
-                *  progress = 50 : 진행 중인 상태
-                *  progress = 100 : 완료
-                *
-                * */
-
-                if (connectToGearBtn.getProgress() == 0) {
-                    connectToGearBtn.setProgress(50);
-                    startConnection();
-                } else if (connectToGearBtn.getProgress() == 100) {
-                    connectToGearBtn.setProgress(0);
-                }else if(connectToGearBtn.getProgress() == -1){
-                    connectToGearBtn.setProgress(0);
-                } else {
-                    connectToGearBtn.setProgress(0);
-                }
-
-                break;
-            }
-
-            // PC와 연결 (device name 설정 화면으로 이동)
-            case R.id.connectToPcBtn: {
-
-                if (connectToPcBtn.getProgress() == 0) {
-
-                    // device name 요청
-                    Intent requestDeviceNameIntent = new Intent(getActivity(), SettingBluetoothActivity.class);
-                    startActivityForResult(requestDeviceNameIntent, REQUEST_DEVICENAME);
-
-                } else if (connectToPcBtn.getProgress() == 100) {
-                    connectToPcBtn.setProgress(0);
-                }else if(connectToPcBtn.getProgress() == -1){
-                    connectToPcBtn.setProgress(0);
-                } else {
-                    connectToPcBtn.setProgress(0);
-                }
-
-
-                break;
-
-            }
-
-            // 기어 어플리케이션에 설정값 전달(알람 시간 간격, 페어링된 PC이름) 및 시작
-            case R.id.startBtn: {
-                final String mPtTitle =   ptTitleEditText.getText().toString().trim();
-
-                // 프레젠테이션 제목을 기입한 경우
-                if(!TextUtils.isEmpty(mPtTitle)){
-
-                    // AlertDialog
-                    AlertDialog.Builder mAlertBuilder = new AlertDialog.Builder(
-                            getActivity());
-                    mAlertBuilder.setTitle(mPtTitle)
-                            .setMessage( "발표를 시작하시겠습니까?")
-                            .setCancelable(false)
-                            .setPositiveButton("시작하기", new DialogInterface.OnClickListener() {
-                                // 시작하기 버튼 클릭시 설정
-                                public void onClick(DialogInterface dialog, int whichButton) {
-
-                                    if(mDeviceName != null && mAccessoryService != null){
-
-
-                                        // Service에 device name, ppt tittle, 계정정보 넘기기
-                                        mAccessoryService.mDeviceName = mDeviceName;
-                                        mAccessoryService.mPtTitle = mPtTitle;
-                                        mAccessoryService.yourId = yourId;
-
-                                        if (timeInterval != null) {
-                                            // timeInterval(ArrayList) -> JSONArray -> String ex) "["2","3","5"]"
-                                            String timeJson = gson.toJson(timeInterval);
-                                            sendDataToService(timeJson);
-                                        }else{
-                                            // 체크박스를 단 한번도 누르지 않은 경우, 눌렀다가 해제한 경우 "[]"을 전달
-                                            sendDataToService("[]");
-                                        }
-
-                                        // Start Activity로 나의 id와 PT 제목을 넘겨준다.
-                                        startActivity(new Intent(getActivity(), FileTransferRequestedActivity.class)
-                                                .putExtra("yourId", yourId)
-                                                .putExtra("title", mPtTitle));
-
-                                        mDeviceName = null;
-
-                                    }else{
-
-                                        getActivity().finish();
-                                        Toast.makeText(getActivity(), "설정을 다시 진행해주세요",Toast.LENGTH_SHORT).show();
-                                    }
-
-                                }
-                            }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                        // 취소 버튼 클릭시 설정
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            dialog.cancel();
-                        }
-                    });
-
-                    AlertDialog dialog = mAlertBuilder.create();
-
-                    dialog.show();
-
-                    // 프레젠테이션 제목을 기입하지 않은 경우
-                }else{
-                    Toast.makeText(getActivity(), "프레젠테이션 제목을 반드시 기입하세요", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
-
-    }
 
     // Service와 Activity를 bind
     private void doBindService() {

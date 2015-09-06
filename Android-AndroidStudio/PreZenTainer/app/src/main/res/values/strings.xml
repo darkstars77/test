@@ -33,15 +33,15 @@
     <string name="action_search">Search</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="nav_item_home">Home</string>
-    <string name="nav_item_friends">Friends</string>
-    <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_setting">시작하기</string>
+    <string name="nav_item_load">불러오기</string>
+    <string name="nav_item_homePage">개발자페이지</string>
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
-        <item>@string/nav_item_home</item>
-        <item>@string/nav_item_friends</item>
-        <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_setting</item>
+        <item>@string/nav_item_load</item>
+        <item>@string/nav_item_homePage</item>
     </string-array>
     
 

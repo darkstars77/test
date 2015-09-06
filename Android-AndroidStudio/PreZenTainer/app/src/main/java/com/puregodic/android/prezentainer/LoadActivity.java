@@ -72,26 +72,26 @@ public class LoadActivity extends Fragment {
         Intent intent = getActivity().getIntent();
         yourId = intent.getStringExtra("yourId");
 
-        mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view);
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
         // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(getActivity());
+        mLayoutManager = new LinearLayoutManager(rootView.getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new LoadPtTitleAdapter(getActivity(), mDataList);
+        mAdapter = new LoadPtTitleAdapter(rootView.getContext(), mDataList);
         mRecyclerView.setAdapter(mAdapter);
 
         RecyclerView.ItemDecoration itemDecoration =
-                new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST);
+                new DividerItemDecoration(rootView.getContext(), DividerItemDecoration.VERTICAL_LIST);
         mRecyclerView.addItemDecoration(itemDecoration);
         // this is the default; this call is actually only necessary with custom ItemAnimators
         mRecyclerView.setItemAnimator(new CustomItemAnimator());
         setDataByVolley();
 
-        mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(getActivity(), mRecyclerView, new ClickListener() {
+        mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(rootView.getContext(), mRecyclerView, new ClickListener() {
 
             @Override
             public void onLongClick(View view, int position) {
@@ -116,61 +116,6 @@ public class LoadActivity extends Fragment {
 
         return rootView;
     }
-
-
-   /*
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_load);
-        
-        mDialogHelper = new DialogHelper(this);
-        
-        Intent intent = getIntent();
-        yourId = intent.getStringExtra("yourId");
-        
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        mRecyclerView.setHasFixedSize(true);
-        // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        
-        mAdapter = new LoadPtTitleAdapter(this, mDataList);
-        mRecyclerView.setAdapter(mAdapter);
-        
-        RecyclerView.ItemDecoration itemDecoration =
-                new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST);
-        mRecyclerView.addItemDecoration(itemDecoration);
-        // this is the default; this call is actually only necessary with custom ItemAnimators
-        mRecyclerView.setItemAnimator(new CustomItemAnimator());
-        setDataByVolley();
-        
-        mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, mRecyclerView, new ClickListener() {
-            
-            @Override
-            public void onLongClick(View view, int position) {
-                // TODO Auto-generated method stub
-            }
-            
-            @Override
-            public void onClick(View view, int position) {
-                
-                final String ptTitle = ((TextView)view.findViewById(R.id.loadPtTitle)).getText().toString();
-                final String currDate = ((TextView)view.findViewById(R.id.loadCurrDate)).getText().toString();
-                Toast.makeText(LoadActivity.this, ptTitle+currDate+yourId, Toast.LENGTH_SHORT).show();
- 
-                startActivity(new Intent(LoadActivity.this,ResultActivity.class)
-                .putExtra("yourId",yourId)               
-                .putExtra("title", ptTitle)
-                .putExtra("date", currDate));
-            }
-        }));
-     
-        
-    }
-*/
 
 
     @Override

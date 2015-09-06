@@ -40,7 +40,7 @@
 
 
     <!--home Ui-->
-    <color name="colorPrimary">#F50057</color>
+    <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#C51162</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="windowBackground">#FFFFFF</color>

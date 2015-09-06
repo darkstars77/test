@@ -22,21 +22,9 @@
             <include
                 android:id="@+id/toolbar"
                 layout="@layout/toolbar" />
-            <Button
-                android:id="@+id/homeStartBtn"
-                android:onClick="myOnClick"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="시작하기" />
 
-            <Button
-                android:id="@+id/homeLoadBtn"
-                android:onClick="myOnClick"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="89dp"
-                android:text="불러오기" />
+
+
         </LinearLayout>
 
         <FrameLayout

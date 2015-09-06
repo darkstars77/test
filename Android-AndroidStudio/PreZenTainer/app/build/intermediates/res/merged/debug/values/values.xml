@@ -3,9 +3,9 @@
     <!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="nav_drawer_labels">
-        <item>@string/nav_item_home</item>
-        <item>@string/nav_item_friends</item>
-        <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_setting</item>
+        <item>@string/nav_item_load</item>
+        <item>@string/nav_item_homePage</item>
     </string-array>
     <!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
@@ -77,7 +77,7 @@
     <color name="color3">#ff12ffa0</color>
     <color name="color4">#ffff6724</color>
     <color name="colorAccent">#FF80AB</color>
-    <color name="colorPrimary">#F50057</color>
+    <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#C51162</color>
     <!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values/common_colors.xml -->
     <eat-comment/>
@@ -882,9 +882,9 @@
     <!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="name">실명</string>
-    <string name="nav_item_friends">Friends</string>
-    <string name="nav_item_home">Home</string>
-    <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_homePage">개발자페이지</string>
+    <string name="nav_item_load">불러오기</string>
+    <string name="nav_item_setting">시작하기</string>
     <!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.android.support/leanback-v17/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="orb_search_action">Search Action</string>

@@ -48,8 +48,15 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
         Intent intent = getIntent();
         yourId = intent.getStringExtra("yourId");
 
-        if (yourId != null)
+        if (yourId != null){
+            fragment = new SettingActivity();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_body, fragment);
+            fragmentTransaction.commit();               // set the toolbar title
             setTitle(yourId+" 님");
+        }
+
         else {
             Toast.makeText(this, "다시 로그인 해주세요", Toast.LENGTH_SHORT).show();
             setTitle("계정 오류");
@@ -63,8 +70,12 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
             logoutUser();
         }
 
-    }
 
+
+
+
+    }
+/*
     // Click Event Handler Call Back
     public void myOnClick(View v) {
         switch (v.getId()) {
@@ -84,7 +95,7 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
         }
 
     }
-
+*/
     private void logoutUser() {
         session.setLogin(false,yourId);
         // Launching the login activity
@@ -150,12 +161,12 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
         String title = getString(R.string.app_name);
         switch (position) {
             case 0:
-                fragment = new LoadActivity();
-                title = getString(R.string.title_activity_load);
+                fragment = new SettingActivity();
+                title = getString(R.string.title_activity_setting);
                 break;
             case 1:
-               fragment = new SettingActivity();
-                title = getString(R.string.title_activity_setting);
+                fragment = new LoadActivity();
+                title = getString(R.string.title_activity_load);
                 break;
             case 2:
               //  fragment = new MessagesFragment();

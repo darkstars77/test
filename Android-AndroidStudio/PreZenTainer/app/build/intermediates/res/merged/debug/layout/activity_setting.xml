@@ -57,7 +57,6 @@
         android:layout_gravity="center"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:onClick="myOnClick"
         android:drawablePadding="30dp"
         android:gravity="center_vertical"
         android:paddingLeft="60dp"
@@ -78,7 +77,6 @@
         android:layout_gravity="center"
         android:textColor="#ffffff"
         android:textSize="18sp"
-        android:onClick="myOnClick"
         android:drawablePadding="30dp"
         android:gravity="center_vertical"
         android:paddingLeft="60dp"
@@ -97,7 +95,6 @@
         android:layout_marginTop="16dp"
         android:layout_gravity="center"
         android:background="@drawable/button_start"
-        android:onClick="myOnClick"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:text="시작하기"/>
