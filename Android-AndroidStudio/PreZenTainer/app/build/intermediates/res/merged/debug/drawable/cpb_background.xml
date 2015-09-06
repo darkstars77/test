@@ -6,4 +6,4 @@
             android:width="@dimen/cpb_stroke_width"
             android:color="@color/cpb_blue"/>
     <solid android:color="@color/cpb_blue"/>
-</shape><!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/drawable/cpb_background.xml --><!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/drawable/cpb_background.xml -->
+</shape><!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/drawable/cpb_background.xml --><!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/drawable/cpb_background.xml -->

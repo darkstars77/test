@@ -24,4 +24,4 @@
     android:clipToPadding="false"
     lb:rowHeight="wrap_content"
     style="?attr/rowHorizontalGridStyle" />
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-release/frameworks/support/v17/leanback/res/layout/lb_list_row.xml --><!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.android.support/leanback-v17/23.0.0/res/layout/lb_list_row.xml -->
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-release/frameworks/support/v17/leanback/res/layout/lb_list_row.xml --><!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.android.support/leanback-v17/23.0.0/res/layout/lb_list_row.xml -->

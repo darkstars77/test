@@ -8,4 +8,4 @@
           android:color="@color/cpb_grey"/>
     <item android:state_enabled="true"
           android:color="@color/cpb_blue"/>
-</selector><!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/color/cpb_idle_state_selector.xml --><!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/color/cpb_idle_state_selector.xml -->
+</selector><!-- From: file:/C:/Work/android-gradle-projects/circular-progress-button/library/src/main/res/color/cpb_idle_state_selector.xml --><!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/color/cpb_idle_state_selector.xml -->

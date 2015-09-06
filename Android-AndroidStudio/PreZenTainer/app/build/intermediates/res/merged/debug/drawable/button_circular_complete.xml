@@ -8,4 +8,4 @@
 		android:color="@color/cpb_grey"/>
 	<item android:state_enabled="true"
 		android:color="@color/complete"/>
-</selector><!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/drawable/button_circular_complete.xml -->
+</selector><!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/src/main/res/drawable/button_circular_complete.xml -->

@@ -18,4 +18,4 @@
        android:interpolator="@android:anim/accelerate_interpolator"
        android:fromXDelta="0" android:toXDelta="0"
        android:duration="@android:integer/config_longAnimTime" />
-<!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/hold.xml -->
+<!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/hold.xml -->

@@ -18,4 +18,4 @@
     <translate android:fromYDelta="-100%" android:toXDelta="0" android:duration="100" />
     <alpha android:fromAlpha="0.0" android:toAlpha="1.0" android:duration="50" />
 </set>
-<!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/slide_top_to_bottom.xml -->
+<!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/slide_top_to_bottom.xml -->

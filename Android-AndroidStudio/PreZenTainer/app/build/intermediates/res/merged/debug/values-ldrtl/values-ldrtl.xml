@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.android.support/leanback-v17/23.0.0/res/values-ldrtl/values-ldrtl.xml -->
+    <!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/build/intermediates/exploded-aar/com.android.support/leanback-v17/23.0.0/res/values-ldrtl/values-ldrtl.xml -->
     <eat-comment/>
     <dimen name="lb_guidance_entry_translationX">120dp</dimen>
     <dimen name="lb_guidedactions_entry_translationX">-384dp</dimen>

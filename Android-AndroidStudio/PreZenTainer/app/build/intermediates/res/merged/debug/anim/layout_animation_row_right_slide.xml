@@ -18,4 +18,4 @@
         android:delay="10%"
         android:animationOrder="reverse"
         android:animation="@anim/slide_right" />
-<!-- From: file:/C:/dev/prezentainer/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/layout_animation_row_right_slide.xml -->
+<!-- From: file:/E:/TEST/Android-AndroidStudio/PreZenTainer/app/src/main/res/anim/layout_animation_row_right_slide.xml -->
