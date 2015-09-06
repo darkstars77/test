@@ -2,8 +2,6 @@
 package com.puregodic.android.prezentainer;
 
 
-import java.util.ArrayList;
-
 import android.bluetooth.BluetoothAdapter;
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,12 +11,7 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -32,19 +25,19 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dd.CircularProgressButton;
 import com.google.gson.Gson;
-import com.puregodic.android.prezentainer.NavigationAdapter.FragmentDrawer;
 import com.puregodic.android.prezentainer.connecthelper.BluetoothHelper;
 import com.puregodic.android.prezentainer.connecthelper.ConnecToPcHelper;
 import com.puregodic.android.prezentainer.connecthelper.ConnectionActionPc;
 import com.puregodic.android.prezentainer.service.AccessoryService;
 import com.puregodic.android.prezentainer.service.ConnectionActionGear;
+
+import java.util.ArrayList;
 
 public class SettingActivity extends Fragment implements BluetoothHelper{
 
@@ -60,7 +53,6 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
     private CheckBox timerCheckBox;
     private RadioGroup timerRadioGroup;
     private EditText ptTitleEditText;
-    private LinearLayout rootView;
 
     //private static final  int PDIALOG_TIMEOUT_ID = 444;
 
@@ -85,6 +77,7 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
     @Override
     public void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        isEnabledAdapter();
     }
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle
@@ -104,7 +97,6 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         timerRadioGroup = (RadioGroup)rootView.findViewById(R.id.timerRadioGroup);
         txtsendJson = (TextView)rootView.findViewById(R.id.txtsendJson);
         ptTitleEditText = (EditText)rootView.findViewById(R.id.ptTitleEditText);
-        rootView = (LinearLayout)rootView.findViewById(R.id.settingActivityView);
         connectToGearBtn = (CircularProgressButton)rootView.findViewById(R.id.connectToGearBtn);
         connectToPcBtn = (CircularProgressButton)rootView.findViewById(R.id.connectToPcBtn);
         connectToGearBtn.setIndeterminateProgressMode(true); // progress mode On !
@@ -297,33 +289,6 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         return rootView;
 
     }
-/*
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        isEnabledAdapter();
-        //super.onPostCreate(savedInstanceState);
-    }
-*/
-
-    /*
-    @Override
-    protected void onRestart() {
-
-        if(mDeviceName != null){
-            new Thread(new Runnable() {
-
-                @Override
-                public void run() {
-                    // 해당 Device(PC) 이름으로 연결
-                    ConnecToPcHelper mConnecToPcHelper = new ConnecToPcHelper();
-                    mConnecToPcHelper.registerConnectionAction(getConnectionActionPc());
-                    mConnecToPcHelper.connectWithPc(mDeviceName);
-                }
-            }).start();
-        }
-       // super.onRestart();
-    }
-*/
     @Override
     public void onDestroy() {
         if(mAccessoryService != null)
@@ -341,7 +306,7 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
             } else {
                 Toast.makeText(getActivity(), "블루투스를 꼭 켜주세요", Toast.LENGTH_SHORT).show();
             }
-        } else if (resultCode == REQUEST_DEVICENAME) {
+        } else if (requestCode == REQUEST_DEVICENAME) {
             mDeviceName = intent.getStringExtra("deviceName");
 
         } else if (requestCode == REQUEST_DETAIL) {

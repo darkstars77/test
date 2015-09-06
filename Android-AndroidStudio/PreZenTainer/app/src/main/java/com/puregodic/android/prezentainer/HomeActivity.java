@@ -3,8 +3,8 @@ package com.puregodic.android.prezentainer;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +32,8 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private SessionManager session;
     
     private Toolbar mToolbar;
+
+    private boolean isTwo = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +73,6 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
             logoutUser();
         }
 
-
-
-
-
     }
 
     private void logoutUser() {
@@ -90,15 +89,6 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        //Toast.makeText(this, data.getStringExtra("deviceName"), Toast.LENGTH_SHORT).show();
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container_body);
-        fragment.onActivityResult(requestCode,resultCode,data);
-       // Toast.makeText(this, Integer.toString(resultCode), Toast.LENGTH_SHORT).show();
-    }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -173,4 +163,40 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
         }
     }
 
+    // back button 눌러서 종료
+
+    @Override
+    public void onBackPressed() {
+
+        if(!isTwo){
+            Toast.makeText(this, "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다", Toast.LENGTH_SHORT)
+                    .show();
+            MyKillTimer mKillTimer = new MyKillTimer(2000,1);
+            mKillTimer.start();
+
+        }else{
+            android.os.Process.killProcess(android.os.Process.myPid());
+            //finish();
+        }
+
+    }
+
+    public class MyKillTimer extends CountDownTimer {
+
+        public MyKillTimer(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+            isTwo = true;
+        }
+
+        @Override
+        public void onFinish() {
+            isTwo = false;
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            Log.i("Test", "isTwo" + isTwo);
+        }
+
+    }
 }
