@@ -225,7 +225,7 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
                     // device name 요청
                     Intent requestDeviceNameIntent = new Intent(getActivity(), SettingBluetoothActivity.class);
                     startActivityForResult(requestDeviceNameIntent, REQUEST_DEVICENAME);
-
+                   // Toast.makeText(getActivity(), Integer.toString(REQUEST_DEVICENAME), Toast.LENGTH_SHORT).show();
                 } else if (connectToPcBtn.getProgress() == 100) {
                     connectToPcBtn.setProgress(0);
                 }else if(connectToPcBtn.getProgress() == -1){
@@ -333,7 +333,6 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-
         if (requestCode == REQUEST_ENABLE_BT) {
 
             // 블루투스 연결 허락을 사용자에게 물어본 이후 동작
@@ -342,7 +341,7 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
             } else {
                 Toast.makeText(getActivity(), "블루투스를 꼭 켜주세요", Toast.LENGTH_SHORT).show();
             }
-        } else if (requestCode == REQUEST_DEVICENAME) {
+        } else if (resultCode == REQUEST_DEVICENAME) {
             mDeviceName = intent.getStringExtra("deviceName");
 
         } else if (requestCode == REQUEST_DETAIL) {
@@ -354,6 +353,19 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
             gsonString = gson.toJson(timeInterval);
             txtsendJson.setText(gsonString);
 
+        }
+
+        if(mDeviceName != null){
+            new Thread(new Runnable() {
+
+                @Override
+                public void run() {
+                    // 해당 Device(PC) 이름으로 연결
+                    ConnecToPcHelper mConnecToPcHelper = new ConnecToPcHelper();
+                    mConnecToPcHelper.registerConnectionAction(getConnectionActionPc());
+                    mConnecToPcHelper.connectWithPc(mDeviceName);
+                }
+            }).start();
         }
         super.onActivityResult(requestCode, resultCode, intent);
     }

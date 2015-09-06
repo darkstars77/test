@@ -75,27 +75,7 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
 
     }
-/*
-    // Click Event Handler Call Back
-    public void myOnClick(View v) {
-        switch (v.getId()) {
-            case R.id.homeStartBtn: {
-                Intent i = new Intent(HomeActivity.this, SettingActivity.class);
-                i.putExtra("yourId", yourId);
-                startActivity(i);
-                break;
-            }
-            case R.id.homeLoadBtn: {
-                Intent i = new Intent(HomeActivity.this, LoadActivity.class);
-                i.putExtra("yourId", yourId);
-                startActivity(i);
-                break;
-            }
 
-        }
-
-    }
-*/
     private void logoutUser() {
         session.setLogin(false,yourId);
         // Launching the login activity
@@ -110,6 +90,15 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        //Toast.makeText(this, data.getStringExtra("deviceName"), Toast.LENGTH_SHORT).show();
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container_body);
+        fragment.onActivityResult(requestCode,resultCode,data);
+       // Toast.makeText(this, Integer.toString(resultCode), Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
