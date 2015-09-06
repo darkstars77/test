@@ -66,22 +66,6 @@ public class SettingBluetoothActivity extends AppCompatActivity implements Bluet
         
         btnSearch = (Button)findViewById(R.id.btnSearch);
 
-        /*swipeRefreshLayout.setOnRefreshListener(this);
-        swipeRefreshLayout.setColorScheme( R.color.color1, R.color.color2, R.color.color3, R.color.color4);
-        
-        *//**
-         * Showing Swipe Refresh animation on activity create
-         * As animation won't start on onCreate, post runnable is used
-         *//*
-        swipeRefreshLayout.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        swipeRefreshLayout.setRefreshing(true);
-                                        //mBluetoothAdapter.startDiscovery();
-                                    }
-                                }
-        );*/
-
     }
 
     @Override

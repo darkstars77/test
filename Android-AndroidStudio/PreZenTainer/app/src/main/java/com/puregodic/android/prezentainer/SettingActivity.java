@@ -181,6 +181,7 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
                     // 프레젠테이션 제목을 기입하지 않은 경우
                 }else{
                     Toast.makeText(getActivity(), "프레젠테이션 제목을 반드시 기입하세요", Toast.LENGTH_SHORT).show();
+                    ptTitleEditText.requestFocus();
                 }
             }
 
