@@ -175,8 +175,8 @@ public class HomeActivity extends AppCompatActivity implements FragmentDrawer.Fr
             mKillTimer.start();
 
         }else{
-            android.os.Process.killProcess(android.os.Process.myPid());
-            //finish();
+            //android.os.Process.killProcess(android.os.Process.myPid());
+            finish();
         }
 
     }

@@ -31,6 +31,7 @@ import android.widget.Toast;
 
 import com.dd.CircularProgressButton;
 import com.google.gson.Gson;
+import com.melnykov.fab.FloatingActionButton;
 import com.puregodic.android.prezentainer.connecthelper.BluetoothHelper;
 import com.puregodic.android.prezentainer.connecthelper.ConnecToPcHelper;
 import com.puregodic.android.prezentainer.connecthelper.ConnectionActionPc;
@@ -101,6 +102,7 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         connectToPcBtn = (CircularProgressButton)rootView.findViewById(R.id.connectToPcBtn);
         connectToGearBtn.setIndeterminateProgressMode(true); // progress mode On !
         connectToPcBtn.setIndeterminateProgressMode(true); // progress mode On !
+        FloatingActionButton fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
 
         // 공백을 클릭시 EditText의 focus와 자판이 사라지게 하기
         rootView.setOnTouchListener(new View.OnTouchListener() {
@@ -115,8 +117,6 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
         });
 
         startBtn.setEnabled(false);
-
-
         startBtn.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
@@ -284,6 +284,13 @@ public class SettingActivity extends Fragment implements BluetoothHelper{
                     startActivityForResult(intent, REQUEST_DETAIL);
                 }
 
+            }
+        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),PairingActivity.class));
             }
         });
 

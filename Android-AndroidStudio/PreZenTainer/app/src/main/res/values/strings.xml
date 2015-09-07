@@ -43,6 +43,7 @@
         <item>@string/nav_item_load</item>
         <item>@string/nav_item_homePage</item>
     </string-array>
+    <string name="title_activity_pairing">패어링</string>
     
 
 </resources>
